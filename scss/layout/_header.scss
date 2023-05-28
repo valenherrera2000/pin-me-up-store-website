@@ -1,0 +1,36 @@
+/* Header Section */
+
+header {
+
+    .promo-banner {
+        @include flex (flex, row, center, center);
+
+        p {
+            @include font($heading-1-font, normal, none, 1.5rem, $font-color);
+        }
+    }
+
+    .items-banner {
+        @include flex (flex, row, flex-end, center);
+
+        div {
+            @include flex (flex, row, flex-end, center);
+            margin: 0.3rem 0rem 0.3rem 0rem;
+
+            p {
+                @include font($button-font, normal, 700, 1.5rem, $font-color);
+            }
+        }
+
+        div {
+            @include flex (flex, row, flex-end, center);
+            padding-right: 0.5rem;
+
+            img {
+                width: 1.6rem;
+                height: 1.4rem;
+            }
+        }
+    }
+
+}

@@ -1,0 +1,31 @@
+/* Body Style */
+body {
+
+    .body-grid {
+        @include grid (grid, 100%, 100%, repeat(2, 7% 77.1% 15%) / 1fr, "sec1" "sec2" "sec3");
+
+        header {
+            grid-area: sec1;
+            .promo-banner {
+                background-color: $main-background;
+                font-family: $heading-1-font;
+            }
+
+            .items-banner {
+                background-color: $secondary-background;
+                font-family: $button-font;
+                color: $font-color;
+            }
+        }
+
+        main {
+            grid-area: sec2;
+            background-color: $main-background;
+        }
+
+        footer {
+            grid-area: sec3;
+            background-color: $main-background;
+        }
+    }
+}

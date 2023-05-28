@@ -1,0 +1,59 @@
+/* Main Section */
+
+main {
+    .logo-banner{
+        background-image: url("/assets/img/pin-me-up-gif-banner.gif");
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 15rem;
+
+        @include flex (flex, column, center, center);
+
+        line-height: 8rem;
+        h1{
+            @include font($bold-font, none, 700, 8rem, $font-color);
+            margin-top: 1rem;
+            text-shadow: 0.7px 0.7px 0px black, 
+            -0.7px -0.7px 0px black,
+            0.7px -0.7px 0px black,
+            -0.7px 0.7px 0px black;
+        }
+
+        h2{
+            @include font($heading-2-font, none, 700, 1.6rem, $font-color);
+            line-height: 1.7rem;
+            text-align: center;
+            text-shadow: 0.4px 0.4px 0px black,
+            -0.4px -0.4px 0px black,
+            0.4px -0.4px 0px black,
+            -0.4px 0.4px 0px black;
+        }
+    }
+    
+    nav {
+        ul {
+            @include flex (flex, row, center, center);
+            margin: 2rem 1rem 1rem 1rem;
+            column-gap: 1rem;
+
+            li {
+                list-style: none;
+
+                a {
+
+                    button {
+                        @include button (0.1rem, 1rem, solid, $font-color);
+                        @include font($button-font, normal, 700, 1.3rem, $font-color);
+                        background-color: $secondary-background;
+                        padding: 0.1rem 1rem 0.1rem 1rem;
+                        transition: background-color 0.3s;
+                    }
+                    button:hover{
+                        @include font($button-font, normal, 700, 1rem, $font-color);
+                        background-color: $highlight-color;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,31 @@
+@mixin grid ($display, $width, $height, $template, $grid-areas) {
+    display: $display;
+    width: $width;
+    height: $height;
+    grid-template: $template;
+    grid-template-areas: $grid-areas;
+}
+
+
+@mixin flex ($display, $direction, $justify, $align) {
+    display: $display;
+    flex-direction: $direction;
+    justify-content: $justify;
+    align-items: $align;
+}
+
+@mixin font($family, $style, $weight, $size, $color) {
+    font-family: $family;
+    font-style: $style;
+    font-weight: $weight;
+    font-size: $size;
+    color: $color;
+}
+
+
+@mixin button ($width, $radius, $style, $color) {
+    border-width: $width;
+    border-radius: $radius;
+    border-style: $style;
+    border-color: $color;
+}
