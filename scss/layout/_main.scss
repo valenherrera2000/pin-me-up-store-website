@@ -43,7 +43,7 @@ main {
 
                     button {
                         @include button (0.1rem, 2.5rem, solid, $font-color);
-                        @include font($button-font, normal, 700, 2.5rem, $font-color);
+                        @include font($button-font, normal, 700, 3rem, $font-color);
                         background-color: $secondary-background;
                         padding: 0.1rem 1rem 0.1rem 1rem;
                         transition: background-color 0.5s;
@@ -69,7 +69,8 @@ main {
         }
 
         .intro-desc {
-            @include font($heading-2-font, none, 700, 3rem, $font-color);
+            @include font($heading-2-font, none, 700, 3.5rem, $font-color);
+            text-align: center;
         }
 
         .intro-title-2 {
@@ -83,8 +84,8 @@ main {
 
         div {
             img {
-                height: 6rem;
-                width: 6rem;
+                height: 8rem;
+                width: 8rem;
             }
         }
 
@@ -92,7 +93,7 @@ main {
             a {
                 button {
                     @include button (0.4rem, 2.5rem, solid, $font-color);
-                    @include font($button-font, normal, 700, 2.5rem, $font-color);
+                    @include font($button-font, normal, 700, 3.5rem, $font-color);
                     background-color: #428cd6;
                     padding: 0.1rem 1rem 0.1rem 1rem;
                     transition: background-color 0.5s;
@@ -117,6 +118,31 @@ main {
         h4 {
             @include font($heading-2-font, none, 400, 3rem, $font-color);
         }
+    }
 
+    .collection {
+        @include flex (flex, row, space-evenly, center);
+        gap: 10rem;
+        flex-wrap: wrap;
+        div{
+            @include flex (flex, column, center, center);
+            gap:0.5rem;
+            button {
+                @include button (0.4rem, 2.5rem, solid, $font-color);
+                @include font($button-font, normal, 700, 2.5rem, $font-color);
+                background-color: #428cd6;
+                padding: 0.1rem 1rem 0.1rem 1rem;
+                transition: background-color 0.5s;
+                margin-top: 1rem;
+            }
+
+            button:hover {
+                font-size: 2.4rem;
+                background-color: $secondary-background;
+            }
+            P{
+                @include font($heading-2-font, normal, 700, 2rem, $font-color);
+            }
+        }
     }
 }

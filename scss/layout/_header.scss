@@ -7,7 +7,7 @@ header {
         background-color: $secondary-background;
 
         p {
-            @include font($heading-1-font, normal, none, 2.5rem, $font-color);
+            @include font($heading-1-font, normal, none, 2.8rem, $font-color);
         }
     }
 

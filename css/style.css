@@ -32,7 +32,7 @@ header .promo-banner p {
   font-family: "DotGothic16", sans-serif;
   font-style: normal;
   font-weight: none;
-  font-size: 2.5rem;
+  font-size: 2.8rem;
   color: #FFFFFF;
 }
 header .items-banner {
@@ -117,7 +117,7 @@ main nav ul li a button {
   font-family: "Gaegu", cursive;
   font-style: normal;
   font-weight: 700;
-  font-size: 2.5rem;
+  font-size: 3rem;
   color: #FFFFFF;
   background-color: #F14D19;
   padding: 0.1rem 1rem 0.1rem 1rem;
@@ -150,8 +150,9 @@ main .intro-banner .intro-desc {
   font-family: "Lekton", sans-serif;
   font-style: none;
   font-weight: 700;
-  font-size: 3rem;
+  font-size: 3.5rem;
   color: #FFFFFF;
+  text-align: center;
 }
 main .intro-banner .intro-title-2 {
   font-family: "Piedra", cursive;
@@ -168,8 +169,8 @@ main .blue-button {
   align-items: center;
 }
 main .blue-button div img {
-  height: 6rem;
-  width: 6rem;
+  height: 8rem;
+  width: 8rem;
 }
 main .blue-button div a button {
   border-width: 0.4rem;
@@ -179,7 +180,7 @@ main .blue-button div a button {
   font-family: "Gaegu", cursive;
   font-style: normal;
   font-weight: 700;
-  font-size: 2.5rem;
+  font-size: 3.5rem;
   color: #FFFFFF;
   background-color: #428cd6;
   padding: 0.1rem 1rem 0.1rem 1rem;
@@ -208,6 +209,47 @@ main .collection-desc h4 {
   font-style: none;
   font-weight: 400;
   font-size: 3rem;
+  color: #FFFFFF;
+}
+main .collection {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 10rem;
+  flex-wrap: wrap;
+}
+main .collection div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+}
+main .collection div button {
+  border-width: 0.4rem;
+  border-radius: 2.5rem;
+  border-style: solid;
+  border-color: #FFFFFF;
+  font-family: "Gaegu", cursive;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 2.5rem;
+  color: #FFFFFF;
+  background-color: #428cd6;
+  padding: 0.1rem 1rem 0.1rem 1rem;
+  transition: background-color 0.5s;
+  margin-top: 1rem;
+}
+main .collection div button:hover {
+  font-size: 2.4rem;
+  background-color: #F14D19;
+}
+main .collection div P {
+  font-family: "Lekton", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 2rem;
   color: #FFFFFF;
 }
 
