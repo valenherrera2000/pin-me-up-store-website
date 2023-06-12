@@ -1,0 +1,45 @@
+footer {
+    height: 80rem;
+    @include flex (flex, column, center, center);
+
+    gap: 5rem;
+    .footer-icon {
+
+        img {
+            width: 70rem;
+        }
+    }
+
+
+    .social-media {
+        ul {
+            @include flex (flex, row, center, center);
+            column-gap: 3.5rem;
+
+            li {
+                list-style: none;
+
+                a {
+                    button {
+                        @include button (0.1rem, 5rem, solid, $font-color);
+                        @include font($button-font, normal, 700, 2.5rem, $font-color);
+                        background-color: $secondary-background;
+                        padding: 0.1rem 1rem 0.1rem 1rem;
+                        transition: background-color 0.5s;
+                    }
+
+                    button:hover {
+                        @include font($button-font, normal, 700, 2rem, $font-color);
+                        background-color: $highlight-color;
+                    }
+                }
+            }
+        }
+    }
+    .footer-details{
+        p{
+            @include font($heading-2-font, normal, 700, 2rem, $font-color);
+            text-align: center;
+        }
+    }
+}

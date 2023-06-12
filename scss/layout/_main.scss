@@ -1,40 +1,40 @@
 /* Main Section */
 
 main {
-    .logo-banner{
+    .logo-banner {
         background-image: url("/assets/img/pin-me-up-gif-banner.gif");
         background-repeat: no-repeat;
         background-size: cover;
-        height: 15rem;
+        height: 50rem;
 
         @include flex (flex, column, center, center);
 
-        line-height: 8rem;
-        h1{
-            @include font($bold-font, none, 700, 8rem, $font-color);
-            margin-top: 1rem;
-            text-shadow: 0.7px 0.7px 0px black, 
-            -0.7px -0.7px 0px black,
-            0.7px -0.7px 0px black,
-            -0.7px 0.7px 0px black;
+        line-height: 18rem;
+
+        h1 {
+            @include font($bold-font, none, 700, 18rem, $font-color);
+            text-shadow: 1.5px 1.5px 0px black,
+                -1.5px -1.5px 0px black,
+                1.5px -1.5px 0px black,
+                -1.5px 1.5px 0px black;
         }
 
-        h2{
-            @include font($heading-2-font, none, 700, 1.6rem, $font-color);
-            line-height: 1.7rem;
+        h2 {
+            @include font($heading-2-font, none, 700, 3rem, $font-color);
+            line-height: 3rem;
             text-align: center;
-            text-shadow: 0.4px 0.4px 0px black,
-            -0.4px -0.4px 0px black,
-            0.4px -0.4px 0px black,
-            -0.4px 0.4px 0px black;
+            text-shadow: 0.7px 0.7px 0px black,
+                -0.7px -0.7px 0px black,
+                0.7px -0.7px 0px black,
+                -0.7px 0.7px 0px black;
         }
     }
-    
+
     nav {
         ul {
+            height: 10rem;
             @include flex (flex, row, center, center);
-            margin: 2rem 1rem 1rem 1rem;
-            column-gap: 1rem;
+            column-gap: 2.5rem;
 
             li {
                 list-style: none;
@@ -42,18 +42,81 @@ main {
                 a {
 
                     button {
-                        @include button (0.1rem, 1rem, solid, $font-color);
-                        @include font($button-font, normal, 700, 1.3rem, $font-color);
+                        @include button (0.1rem, 2.5rem, solid, $font-color);
+                        @include font($button-font, normal, 700, 2.5rem, $font-color);
                         background-color: $secondary-background;
                         padding: 0.1rem 1rem 0.1rem 1rem;
-                        transition: background-color 0.3s;
+                        transition: background-color 0.5s;
                     }
-                    button:hover{
-                        @include font($button-font, normal, 700, 1rem, $font-color);
+
+                    button:hover {
+                        @include font($button-font, normal, 700, 2rem, $font-color);
                         background-color: $highlight-color;
                     }
                 }
             }
         }
+    }
+
+    .intro-banner {
+        height: 50rem;
+
+        @include flex (flex, row, center, center);
+        column-gap: 5rem;
+
+        .intro-title {
+            @include font($bold-font, none, 700, 18rem, $font-color);
+        }
+
+        .intro-desc {
+            @include font($heading-2-font, none, 700, 3rem, $font-color);
+        }
+
+        .intro-title-2 {
+            @include font($bold-font, none, 700, 18rem, $font-color);
+        }
+    }
+
+    .blue-button {
+        height: 15rem;
+        @include flex (flex, column, center, center);
+
+        div {
+            img {
+                height: 6rem;
+                width: 6rem;
+            }
+        }
+
+        div {
+            a {
+                button {
+                    @include button (0.4rem, 2.5rem, solid, $font-color);
+                    @include font($button-font, normal, 700, 2.5rem, $font-color);
+                    background-color: #428cd6;
+                    padding: 0.1rem 1rem 0.1rem 1rem;
+                    transition: background-color 0.5s;
+                }
+
+                button:hover {
+                    font-size: 2.4rem;
+                    background-color: $secondary-background;
+                }
+            }
+        }
+    }
+
+    .collection-desc {
+        height: 30rem;
+        @include flex (flex, column, center, center);
+
+        h3 {
+            @include font($heading-1-font, none, 400, 8rem, $font-color);
+        }
+
+        h4 {
+            @include font($heading-2-font, none, 400, 3rem, $font-color);
+        }
+
     }
 }

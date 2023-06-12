@@ -1,24 +1,26 @@
 /* Header Section */
 
 header {
-
     .promo-banner {
         @include flex (flex, row, center, center);
+        height: 3.5rem;
+        background-color: $secondary-background;
 
         p {
-            @include font($heading-1-font, normal, none, 1.5rem, $font-color);
+            @include font($heading-1-font, normal, none, 2.5rem, $font-color);
         }
     }
 
     .items-banner {
         @include flex (flex, row, flex-end, center);
+        height: 3.5rem;
 
         div {
             @include flex (flex, row, flex-end, center);
             margin: 0.3rem 0rem 0.3rem 0rem;
 
             p {
-                @include font($button-font, normal, 700, 1.5rem, $font-color);
+                @include font($button-font, normal, 700, 2.5rem, $font-color);
             }
         }
 
@@ -27,8 +29,8 @@ header {
             padding-right: 0.5rem;
 
             img {
-                width: 1.6rem;
-                height: 1.4rem;
+                width: 2rem;
+                height: 2rem;
             }
         }
     }
