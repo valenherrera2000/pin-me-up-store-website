@@ -3,6 +3,7 @@ footer {
     @include flex (flex, column, center, center);
 
     gap: 5rem;
+
     .footer-icon {
 
         img {
@@ -36,10 +37,27 @@ footer {
             }
         }
     }
-    .footer-details{
-        p{
+
+    .footer-details {
+        p {
             @include font($heading-2-font, normal, 700, 2rem, $font-color);
             text-align: center;
+        }
+    }
+
+    .index-arrow {
+        position: fixed;
+        bottom: 3rem;
+        right: 3rem;
+
+        img {
+            width: 7rem;
+            height: 7rem;
+        }
+
+        img:hover {
+            width: 8.5rem;
+            height: 8.5rem;
         }
     }
 }

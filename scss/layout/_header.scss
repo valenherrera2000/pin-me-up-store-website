@@ -1,8 +1,11 @@
 /* Header Section */
 
 header {
+    position: fixed;
+    width: 100%;
+
     .promo-banner {
-        @include flex (flex, row, center, center);
+        @include flex (flex, column, center, center);
         height: 3.5rem;
         background-color: $secondary-background;
 
@@ -14,13 +17,14 @@ header {
     .items-banner {
         @include flex (flex, row, flex-end, center);
         height: 3.5rem;
+        background-color: $main-background;
 
         div {
             @include flex (flex, row, flex-end, center);
             margin: 0.3rem 0rem 0.3rem 0rem;
 
             p {
-                @include font($button-font, normal, 700, 2.5rem, $font-color);
+                @include font($button-font, normal, 700, 3rem, $font-color);
             }
         }
 
@@ -29,8 +33,8 @@ header {
             padding-right: 0.5rem;
 
             img {
-                width: 2rem;
-                height: 2rem;
+                width: 3rem;
+                height: 3rem;
             }
         }
     }

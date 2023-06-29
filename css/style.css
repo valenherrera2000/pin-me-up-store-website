@@ -20,9 +20,13 @@ body .body-style {
 }
 
 /* Header Section */
+header {
+  position: fixed;
+  width: 100%;
+}
 header .promo-banner {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   height: 3.5rem;
@@ -41,6 +45,7 @@ header .items-banner {
   justify-content: flex-end;
   align-items: center;
   height: 3.5rem;
+  background-color: #6E0000;
 }
 header .items-banner div {
   display: flex;
@@ -53,7 +58,7 @@ header .items-banner div p {
   font-family: "Gaegu", cursive;
   font-style: normal;
   font-weight: 700;
-  font-size: 2.5rem;
+  font-size: 3rem;
   color: #FFFFFF;
 }
 header .items-banner div {
@@ -64,8 +69,8 @@ header .items-banner div {
   padding-right: 0.5rem;
 }
 header .items-banner div img {
-  width: 2rem;
-  height: 2rem;
+  width: 3rem;
+  height: 3rem;
 }
 
 /* Main Section */
@@ -73,6 +78,7 @@ main .logo-banner {
   background-image: url("/assets/img/pin-me-up-gif-banner.gif");
   background-repeat: no-repeat;
   background-size: cover;
+  padding-top: 3%;
   height: 50rem;
   display: flex;
   flex-direction: column;
@@ -127,7 +133,7 @@ main nav ul li a button:hover {
   font-family: "Gaegu", cursive;
   font-style: normal;
   font-weight: 700;
-  font-size: 2rem;
+  font-size: 2.7rem;
   color: #FFFFFF;
   background-color: #6BB0F3;
 }
@@ -187,7 +193,7 @@ main .blue-button div a button {
   transition: background-color 0.5s;
 }
 main .blue-button div a button:hover {
-  font-size: 2.4rem;
+  font-size: 3rem;
   background-color: #F14D19;
 }
 main .collection-desc {
@@ -216,15 +222,14 @@ main .collection {
   flex-direction: row;
   justify-content: space-evenly;
   align-items: center;
-  gap: 10rem;
   flex-wrap: wrap;
+  gap: 5rem;
 }
 main .collection div {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 0.5rem;
 }
 main .collection div button {
   border-width: 0.4rem;
@@ -234,23 +239,116 @@ main .collection div button {
   font-family: "Gaegu", cursive;
   font-style: normal;
   font-weight: 700;
-  font-size: 2.5rem;
+  font-size: 3rem;
   color: #FFFFFF;
-  background-color: #428cd6;
+  background-color: #F14D19;
   padding: 0.1rem 1rem 0.1rem 1rem;
   transition: background-color 0.5s;
-  margin-top: 1rem;
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
 }
 main .collection div button:hover {
-  font-size: 2.4rem;
-  background-color: #F14D19;
+  font-size: 2.6rem;
+  background-color: #6BB0F3;
 }
 main .collection div P {
   font-family: "Lekton", sans-serif;
   font-style: normal;
   font-weight: 700;
-  font-size: 2rem;
+  font-size: 3rem;
   color: #FFFFFF;
+}
+main .cart-wrap {
+  width: 40%;
+  margin: auto;
+}
+main .cart-wrap .cart-table {
+  text-align: left;
+  width: 100%;
+}
+main .cart-wrap .cart-table tr th {
+  border-bottom: 1px solid #FFFFFF;
+  font-family: "Lekton", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 3.5rem;
+  color: #FFFFFF;
+}
+main .cart-wrap .cart-table tr td {
+  border-bottom: 1px solid #FFFFFF;
+  background-color: rgba(107, 175, 243, 0.4509803922);
+  font-family: "Gaegu", cursive;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 3rem;
+  color: #FFFFFF;
+}
+main .cart-wrap .subtotal, main .cart-wrap .total {
+  font-family: "Lekton", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 5.2rem;
+  color: #FFFFFF;
+}
+main .cart-wrap .total {
+  border-top: 1px solid #FFFFFF;
+  background-color: rgba(241, 75, 25, 0.6);
+}
+main .check-out-form {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+main .check-out-form form div {
+  padding-top: 1rem;
+}
+main .check-out-form form div div label {
+  font-family: "DotGothic16", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 3.5rem;
+  color: #FFFFFF;
+}
+main .check-out-form form div div input {
+  width: 70rem;
+  height: 4.5rem;
+  border-width: 0.5rem;
+  border-radius: 0.1rem;
+  border-style: solid;
+  border-color: #6BB0F3;
+}
+main .check-out-form form div div textarea {
+  width: 70rem;
+  height: 10rem;
+  border-width: 0.5rem;
+  border-radius: 0.1rem;
+  border-style: solid;
+  border-color: #6BB0F3;
+}
+main .check-out-form form .submit {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+main .check-out-form form .submit button {
+  border-width: 0.6rem;
+  border-radius: 2.5rem;
+  border-style: solid;
+  border-color: #FFFFFF;
+  font-family: "Gaegu", cursive;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 3rem;
+  color: #FFFFFF;
+  background-color: #6BB0F3;
+  padding: 0.1rem 1rem 0.1rem 1rem;
+  transition: background-color 0.5s;
+  margin-top: 1rem;
+}
+main .check-out-form form .submit button:hover {
+  font-size: 2.6rem;
+  background-color: #F14D19;
 }
 
 footer {
@@ -303,6 +401,60 @@ footer .footer-details p {
   font-size: 2rem;
   color: #FFFFFF;
   text-align: center;
+}
+footer .index-arrow {
+  position: fixed;
+  bottom: 3rem;
+  right: 3rem;
+}
+footer .index-arrow img {
+  width: 7rem;
+  height: 7rem;
+}
+footer .index-arrow img:hover {
+  width: 8.5rem;
+  height: 8.5rem;
+}
+
+body {
+  background-color: #6E0000;
+}
+body section {
+  padding-top: 20rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+}
+body section .purchase-icon img {
+  width: 80rem;
+}
+body section .purchase-details {
+  font-family: "Lekton", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 4.5rem;
+  color: #FFFFFF;
+  text-align: center;
+}
+body section .back-button a button {
+  border-width: 0.4rem;
+  border-radius: 2.5rem;
+  border-style: solid;
+  border-color: #FFFFFF;
+  font-family: "Gaegu", cursive;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 3rem;
+  color: #FFFFFF;
+  background-color: #428cd6;
+  padding: 0.1rem 1rem 0.1rem 1rem;
+  transition: background-color 0.5s;
+}
+body section .back-button a button:hover {
+  font-size: 2.2rem;
+  background-color: #F14D19;
 }
 
 /*# sourceMappingURL=style.css.map */

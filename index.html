@@ -31,12 +31,12 @@
                     <p>0 ITEMS</p>
                 </div>
                 <div>
-                    <img src="/assets/img/menu-hamburger.png" alt="items menu">
+                    <img src="/assets/img/shopping-cart.png" alt="cart image">
                 </div>
             </div>
         </header>
         <main>
-            <div class="logo-banner">
+            <div id="banner" class="logo-banner">
                 <h1>PIN ME UP!</h1>
                 <h2>From cute and quirky to edgy and bold,<br>we sell the most unique PINS just for you!</h2>
             </div>
@@ -46,7 +46,6 @@
                         <li><a href="#all"><button type="button">ALL</button></a></li>
                         <li><a href="#sale"><button type="button">SALE</button></a></li>
                         <li><a href="#new"><button type="button">NEW</button></a></li>
-                        <li><a href="#clients"><button type="button">CLIENTS</button></a></li>
                         <li><a href="#cart"><button type="button">CART</button></a></li>
                     </ul>
                 </nav>
@@ -79,42 +78,6 @@
                     <h4>Get pinned with our CUTE and QUIRKY designs</h4>
                 </div>
                 <div class="collection">
-                    <div>
-                        <img src="./assets/img/pin-picture.png" alt="pin image">
-                        <button type="button">BUY PIN</button>
-                        <p>PIN NAME</p>
-                        <p>$PRICE</p>
-                    </div>
-                    <div>
-                        <img src="./assets/img/pin-picture.png" alt="pin image">
-                        <button type="button">BUY PIN</button>
-                        <p>PIN NAME</p>
-                        <p>$PRICE</p>
-                    </div>
-                    <div>
-                        <img src="./assets/img/pin-picture.png" alt="pin image">
-                        <button type="button">BUY PIN</button>
-                        <p>PIN NAME</p>
-                        <p>$PRICE</p>
-                    </div>
-                    <div>
-                        <img src="./assets/img/pin-picture.png" alt="pin image">
-                        <button type="button">BUY PIN</button>
-                        <p>PIN NAME</p>
-                        <p>$PRICE</p>
-                    </div>
-                    <div>
-                        <img src="./assets/img/pin-picture.png" alt="pin image">
-                        <button type="button">BUY PIN</button>
-                        <p>PIN NAME</p>
-                        <p>$PRICE</p>
-                    </div>
-                    <div>
-                        <img src="./assets/img/pin-picture.png" alt="pin image">
-                        <button type="button">BUY PIN</button>
-                        <p>PIN NAME</p>
-                        <p>$PRICE</p>
-                    </div>
                 </div>
             </section>
             <section id="sale">
@@ -123,24 +86,6 @@
                     <h4>Check out our DISCOUNTED pins today</h4>
                 </div>
                 <div class="collection">
-                    <div>
-                        <img src="./assets/img/pin-picture.png" alt="pin image">
-                        <button type="button">BUY PIN</button>
-                        <p>PIN NAME</p>
-                        <p>$PRICE</p>
-                    </div>
-                    <div>
-                        <img src="./assets/img/pin-picture.png" alt="pin image">
-                        <button type="button">BUY PIN</button>
-                        <p>PIN NAME</p>
-                        <p>$PRICE</p>
-                    </div>
-                    <div>
-                        <img src="./assets/img/pin-picture.png" alt="pin image">
-                        <button type="button">BUY PIN</button>
-                        <p>PIN NAME</p>
-                        <p>$PRICE</p>
-                    </div>
                 </div>
             </section>
             <section id="new">
@@ -149,31 +94,82 @@
                     <h4>What's NEW in our pin collection</h4>
                 </div>
                 <div class="collection">
-                    <div>
-                        <img src="./assets/img/pin-picture.png" alt="pin image">
-                        <button type="button">Get Pin</button>
-                        <p>PIN NAME</p>
-                        <p>$PRICE</p>
+                </div>
+            </section>
+            <section id="cart">
+                <div class="collection-desc">
+                    <h3>Your Pin Cart!</h3>
+                    <h4>Review and Purchase Your Favorite Pins:</h4>
+                </div>
+                <div class="cart-wrap">
+                    <table class="cart-table">
+                        <tr>
+                            <th>ID</th>
+                            <th>NAME</th>
+                            <th>PRICE</th>
+                        </tr>
+                    </table>
+                    <br>
+                    <div class="subtotal">
+                        <p>SUBTOTAL (-shipping):</p>
                     </div>
-                    <div>
-                        <img src="./assets/img/pin-picture.png" alt="pin image">
-                        <button type="button">Get Pin</button>
-                        <p>PIN NAME</p>
-                        <p>$PRICE</p>
-                    </div>
-                    <div>
-                        <img src="./assets/img/pin-picture.png" alt="pin image">
-                        <button type="button">Get Pin</button>
-                        <p>PIN NAME</p>
-                        <p>$PRICE</p>
+                    <div class="total">
+                        <p>TOTAL AMOUNT:</p>
                     </div>
                 </div>
             </section>
-            <section id="clients">
-                <!--  -->
-            </section>
-            <section id="cart">
-                <!-- Sidebar cart  -->
+            <section id="check-out">
+                <div class="collection-desc">
+                    <h3>Let's Check-Out...</h3>
+                    <h4>Pin your details for us to send your order home!</h4>
+                </div>
+                <div class="check-out-form">
+                    <form>
+                        <div>
+                            <div>
+                                <label for="name">Name</label>
+                            </div>
+                            <div>
+                                <input type="text" id="name" name="name" required>
+                            </div>
+                        </div>
+                        <div>
+                            <div>
+                                <label for="number">Phone</label>
+                            </div>
+                            <div>
+                                <input type="text" id="number" name="number" required>
+                            </div>
+                        </div>
+                        <div>
+                            <div>
+                                <label for="email">Email</label>
+                            </div>
+                            <div>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                        </div>
+                        <div>
+                            <div>
+                                <label for="phone">Address</label>
+                            </div>
+                            <div>
+                                <input type="tel" id="phone" name="phone" required>
+                            </div>
+                        </div>
+                        <div>
+                            <div>
+                                <label for="comments">Comments</label>
+                            </div>
+                            <div>
+                                <textarea id="comments" name="comments"></textarea>
+                            </div>
+                        </div>
+                        <div class="submit">
+                            <a href="./html/checkout.html"><button type="button">CONFIRM!</button></a>
+                        </div>
+                    </form>
+                </div>
             </section>
         </main>
         <footer>
@@ -191,9 +187,13 @@
                 <p>© Copyright Valentina Herrera.<br>Contact me: valen.herrera2000@gmail.com<br>LinkedIn:
                     https://www.linkedin.com/valenherrera<br>All rights reserved.</p>
             </div>
+            <div class="index-arrow">
+                <a href="#banner"><img src="./assets/img/index-arrow.png" alt="arrow button"></a>
+            </div>
         </footer>
-        </div>
-        <script src="functions.js"></script>
-        </body>
+    </div>
+    <script src="./js/products.js"></script>
+    <script src="./js/code.js"></script>
+</body>
 
 </html>
