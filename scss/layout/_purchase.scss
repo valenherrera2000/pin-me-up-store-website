@@ -2,7 +2,6 @@ body {
     background-color: $main-background;
 
     section {
-        padding-top: 20rem;
         @include flex (flex, column, center, center);
         gap: 3rem;
         
@@ -14,8 +13,10 @@ body {
         }
 
         .purchase-details {
-            @include font($heading-2-font, normal, 700, 4.5rem, $font-color);
-            text-align: center;
+            p{
+                @include font($heading-2-font, normal, 700, 4.5rem, $font-color);
+                text-align: center;
+            }
         }
 
         .back-button {

@@ -44,7 +44,7 @@ header .items-banner {
   flex-direction: row;
   justify-content: flex-end;
   align-items: center;
-  height: 3.5rem;
+  height: 4rem;
   background-color: #6E0000;
 }
 header .items-banner div {
@@ -55,10 +55,10 @@ header .items-banner div {
   margin: 0.3rem 0rem 0.3rem 0rem;
 }
 header .items-banner div p {
-  font-family: "Gaegu", cursive;
+  font-family: "Lekton", sans-serif;
   font-style: normal;
   font-weight: 700;
-  font-size: 3rem;
+  font-size: 2.5rem;
   color: #FFFFFF;
 }
 header .items-banner div {
@@ -259,7 +259,7 @@ main .collection div P {
   color: #FFFFFF;
 }
 main .cart-wrap {
-  width: 40%;
+  width: 50%;
   margin: auto;
 }
 main .cart-wrap .cart-table {
@@ -283,11 +283,17 @@ main .cart-wrap .cart-table tr td {
   font-size: 3rem;
   color: #FFFFFF;
 }
+main .cart-wrap .cart-table tr td img {
+  margin-top: 1rem;
+  margin-left: 3rem;
+  width: 3.5rem;
+  height: 4rem;
+}
 main .cart-wrap .subtotal, main .cart-wrap .total {
   font-family: "Lekton", sans-serif;
   font-style: normal;
   font-weight: 700;
-  font-size: 5.2rem;
+  font-size: 3.5rem;
   color: #FFFFFF;
 }
 main .cart-wrap .total {
@@ -316,6 +322,7 @@ main .check-out-form form div div input {
   border-radius: 0.1rem;
   border-style: solid;
   border-color: #6BB0F3;
+  font-size: 2.5rem;
 }
 main .check-out-form form div div textarea {
   width: 70rem;
@@ -324,6 +331,7 @@ main .check-out-form form div div textarea {
   border-radius: 0.1rem;
   border-style: solid;
   border-color: #6BB0F3;
+  font-size: 2.5rem;
 }
 main .check-out-form form .submit {
   display: flex;
@@ -420,7 +428,6 @@ body {
   background-color: #6E0000;
 }
 body section {
-  padding-top: 20rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -430,7 +437,7 @@ body section {
 body section .purchase-icon img {
   width: 80rem;
 }
-body section .purchase-details {
+body section .purchase-details p {
   font-family: "Lekton", sans-serif;
   font-style: normal;
   font-weight: 700;

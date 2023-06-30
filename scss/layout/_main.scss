@@ -125,7 +125,7 @@ main {
         @include flex (flex, row, space-evenly, center);
         flex-wrap: wrap;
         gap: 5rem;
-        
+
         div{
             @include flex (flex, column, center, center);
 
@@ -149,7 +149,7 @@ main {
         }
     }
     .cart-wrap {
-        width: 40%;
+        width: 50%;
         margin: auto;
     
         .cart-table {
@@ -166,12 +166,18 @@ main {
                     border-bottom: 1px solid $font-color;
                     background-color: #6baff373;
                     @include font($button-font, normal, 700, 3rem, $font-color);
+                    img{
+                        margin-top: 1rem;
+                        margin-left: 3rem;
+                        width: 3.5rem;
+                        height: 4rem;
+                    }
                 }
             }
         }
     
         .subtotal {
-            @include font($heading-2-font, normal, 700, 5.2rem, $font-color);
+            @include font($heading-2-font, normal, 700, 3.5rem, $font-color);
         }
     
         .total {
@@ -179,10 +185,7 @@ main {
             border-top: 1px solid $font-color;
             background-color: #f14b1999;
         }
-    }
-    
-    
-    
+    }  
     
     .check-out-form {
         display: flex;
@@ -203,7 +206,8 @@ main {
                     input {
                         width: 70rem;
                         height: 4.5rem;
-                        @include button (0.5rem, 0.1rem, solid, $highlight-color)
+                        @include button (0.5rem, 0.1rem, solid, $highlight-color);
+                        font-size: 2.5rem;
                     }
                 }
     
@@ -211,7 +215,8 @@ main {
                     textarea {
                         width: 70rem;
                         height: 10rem;
-                        @include button (0.5rem, 0.1rem, solid, $highlight-color)
+                        @include button (0.5rem, 0.1rem, solid, $highlight-color);
+                        font-size: 2.5rem;
                     }
                 }
             }

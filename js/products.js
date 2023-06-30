@@ -1,3 +1,5 @@
+/* Available products */
+
 class PinProduct {
     constructor(id, name, price) {
         this.id = id;
@@ -22,3 +24,19 @@ const pinProducts = [
 ];
 
 
+/* Add product array to HTML */
+
+class ProductToHTML {
+    constructor(product, collectionElement) {
+        const div = document.createElement('div');
+
+        div.innerHTML = `
+        <img src="./assets/img/pin-picture.png" alt="pin image">
+        <button id=${product.id} class= "buy" type="button">BUY PIN</button>
+        <p>${product.name}</p>
+        <p>$${product.price}</p>
+      `;
+
+        collectionElement.appendChild(div);
+    }
+};

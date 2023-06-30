@@ -16,7 +16,7 @@ header {
 
     .items-banner {
         @include flex (flex, row, flex-end, center);
-        height: 3.5rem;
+        height: 4rem;
         background-color: $main-background;
 
         div {
@@ -24,7 +24,7 @@ header {
             margin: 0.3rem 0rem 0.3rem 0rem;
 
             p {
-                @include font($button-font, normal, 700, 3rem, $font-color);
+                @include font($heading-2-font, normal, 700, 2.5rem, $font-color);
             }
         }
 

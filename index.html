@@ -24,11 +24,11 @@
         <header>
             <!-- Nav Bar -->
             <div class="promo-banner">
-                <p>BUY MORE THAN 4 PINS & GET 10% OFF + FREE SHIPPING HOME!</p>
+                <p>BUY 4 PINS & GET 10% OFF + FREE SHIPPING HOME!</p>
             </div>
             <div class="items-banner">
                 <div>
-                    <p>0 ITEMS</p>
+                    <p id="itemCount">0 ITEMS</p>
                 </div>
                 <div>
                     <img src="/assets/img/shopping-cart.png" alt="cart image">
@@ -107,11 +107,12 @@
                             <th>ID</th>
                             <th>NAME</th>
                             <th>PRICE</th>
+                            <th> </th>
                         </tr>
                     </table>
                     <br>
                     <div class="subtotal">
-                        <p>SUBTOTAL (-shipping):</p>
+                        <p>SUBTOTAL:</p>
                     </div>
                     <div class="total">
                         <p>TOTAL AMOUNT:</p>
@@ -135,10 +136,10 @@
                         </div>
                         <div>
                             <div>
-                                <label for="number">Phone</label>
+                                <label for="phone">Phone</label>
                             </div>
                             <div>
-                                <input type="text" id="number" name="number" required>
+                                <input type="tel" id="phone" name="number" required>
                             </div>
                         </div>
                         <div>
@@ -151,10 +152,10 @@
                         </div>
                         <div>
                             <div>
-                                <label for="phone">Address</label>
+                                <label for="address">Address</label>
                             </div>
                             <div>
-                                <input type="tel" id="phone" name="phone" required>
+                                <input type="text" id="address" name="phone" required>
                             </div>
                         </div>
                         <div>
@@ -193,7 +194,8 @@
         </footer>
     </div>
     <script src="./js/products.js"></script>
-    <script src="./js/code.js"></script>
+    <script src="./js/cart-functions.js"></script>
+    <script src="./js/forms-functions.js"></script>
 </body>
 
 </html>
