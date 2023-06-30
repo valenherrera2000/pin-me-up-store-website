@@ -55,7 +55,6 @@ function validateForm() {
 
 // Event listener to form submit event
 form.addEventListener('submit', function (event) {
-    
     event.preventDefault(); // Prevent the form from submitting
 
     // Validate the form
@@ -66,23 +65,21 @@ form.addEventListener('submit', function (event) {
     // Store form data
     storeFormData();
 
+    // Display purchase details
+    displayPurchaseDetails();
 
     // Redirect to checkout.html
     window.location.href = './html/checkout.html';
 });
 
-
-// Validate event beore window load
+// Validate event before window load
 window.addEventListener('beforeunload', function (event) {
-
     // Validate the form
     if (!validateForm()) {
         event.preventDefault();
-
         event.returnValue = '';
     }
 });
-
 
 // Store form data in local storage
 function storeFormData() {
@@ -107,11 +104,9 @@ function displayPurchaseDetails() {
 
         purchaseDetails.innerHTML = `
             <p>${formData.name}, your order has been placed!<br>
-            Sit tight until we send over your pins to your home address: ${formData.address}<br>Stay tuned for furter details!</p>
+            Sit tight until we send over your pins to your home address: ${formData.address}<br>Stay tuned for further details!</p>
         `;
     }
 }
 
-
-
-displayPurchaseDetails();
+console.log(purchaseDetails)
