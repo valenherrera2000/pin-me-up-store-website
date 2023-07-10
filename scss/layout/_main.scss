@@ -70,7 +70,7 @@ main {
         }
 
         .intro-desc {
-            @include font($heading-2-font, none, 700, 3.5rem, $font-color);
+            @include font($heading-2-font, none, 700, 4rem, $font-color);
             text-align: center;
         }
 

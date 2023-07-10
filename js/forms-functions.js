@@ -53,33 +53,6 @@ function validateForm() {
     return isValid;
 }
 
-// Event listener to form submit event
-form.addEventListener('submit', function (event) {
-    event.preventDefault(); // Prevent the form from submitting
-
-    // Validate the form
-    if (!validateForm()) {
-        return;
-    }
-
-    // Store form data
-    storeFormData();
-
-    // Display purchase details
-    displayPurchaseDetails();
-
-    // Redirect to checkout.html
-    window.location.href = './html/checkout.html';
-});
-
-// Validate event before window load
-window.addEventListener('beforeunload', function (event) {
-    // Validate the form
-    if (!validateForm()) {
-        event.preventDefault();
-        event.returnValue = '';
-    }
-});
 
 // Store form data in local storage
 function storeFormData() {
@@ -94,19 +67,66 @@ function storeFormData() {
     localStorage.setItem('formData', JSON.stringify(formData));
 }
 
-// Display purchase details
-function displayPurchaseDetails() {
-    const purchaseDetails = document.querySelector('.purchase-details');
+
+//Show Purchase details
+function purchaseDetails() {
     const formDataJSON = localStorage.getItem('formData');
 
     if (formDataJSON) {
         const formData = JSON.parse(formDataJSON);
+        const purchaseDetails = document.querySelector('.purchase-details');
 
-        purchaseDetails.innerHTML = `
+        //Submit message
+        purchaseDetails.innerHTML =
+            `
             <p>${formData.name}, your order has been placed!<br>
-            Sit tight until we send over your pins to your home address: ${formData.address}<br>Stay tuned for further details!</p>
-        `;
-    }
+            Sit tight until we send over your pins to your home address:<br>
+            ${formData.address}<br>
+            Stay tuned for further details!</p>
+            `;
+        setTimeout(() => {
+            purchaseDetails.innerHTML = ''; // Clear the content after 15 seconds
+        }, 10000);
+    };
 }
 
-console.log(purchaseDetails)
+//Reset Purchase Info
+function resetPage(){
+        cartTable.innerHTML = '';
+        itemCount.textContent = '0 ITEMS';
+        subtotal = 0;
+        form.reset();
+}
+
+
+//Checkout when button click
+const submitButton = document.querySelector('.submit button[type="button"]');
+
+submitButton.onclick = () => {
+    const isFormValid = validateForm();
+    const cartRows = cartTable.getElementsByTagName('tr');
+    const isCartEmpty = cartRows.length === 0;
+
+    if (!isFormValid && isCartEmpty) {
+        // Both form fields & cart not valid
+        alert('You have invalid information. Please, review and submit again!');
+        return;
+    }
+
+    if (!isFormValid) {
+        // Form fields not valid
+        alert('Form fields are not valid');
+        return;
+    }
+
+    if (isCartEmpty) {
+        // Cart is empty
+        alert('Careful! Your cart is empty');
+        return;
+    }
+
+    // Validation passed
+    resetPage();
+    storeFormData();
+    purchaseDetails();
+}

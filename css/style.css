@@ -54,7 +54,10 @@ header .items-banner div {
   align-items: center;
   margin: 0.3rem 0rem 0.3rem 0rem;
 }
-header .items-banner div p {
+header .items-banner div a {
+  text-decoration: none;
+}
+header .items-banner div a p {
   font-family: "Lekton", sans-serif;
   font-style: normal;
   font-weight: 700;
@@ -69,8 +72,8 @@ header .items-banner div {
   padding-right: 0.5rem;
 }
 header .items-banner div img {
-  width: 3rem;
-  height: 3rem;
+  width: 2.7rem;
+  height: 2.7rem;
 }
 
 /* Main Section */
@@ -156,7 +159,7 @@ main .intro-banner .intro-desc {
   font-family: "Lekton", sans-serif;
   font-style: none;
   font-weight: 700;
-  font-size: 3.5rem;
+  font-size: 4rem;
   color: #FFFFFF;
   text-align: center;
 }
@@ -420,8 +423,8 @@ footer .index-arrow img {
   height: 7rem;
 }
 footer .index-arrow img:hover {
-  width: 8.5rem;
-  height: 8.5rem;
+  width: 8rem;
+  height: 8rem;
 }
 
 body {
