@@ -68,41 +68,9 @@ function storeFormData() {
 }
 
 
-//Show Purchase details
-function purchaseDetails() {
-    const formDataJSON = localStorage.getItem('formData');
+//Function for data validation before checkout
 
-    if (formDataJSON) {
-        const formData = JSON.parse(formDataJSON);
-        const purchaseDetails = document.querySelector('.purchase-details');
-
-        //Submit message
-        purchaseDetails.innerHTML =
-            `
-            <p>${formData.name}, your order has been placed!<br>
-            Sit tight until we send over your pins to your home address:<br>
-            ${formData.address}<br>
-            Stay tuned for further details!</p>
-            `;
-        setTimeout(() => {
-            purchaseDetails.innerHTML = ''; // Clear the content after 15 seconds
-        }, 10000);
-    };
-}
-
-//Reset Purchase Info
-function resetPage(){
-        cartTable.innerHTML = '';
-        itemCount.textContent = '0 ITEMS';
-        subtotal = 0;
-        form.reset();
-}
-
-
-//Checkout when button click
-const submitButton = document.querySelector('.submit button[type="button"]');
-
-submitButton.onclick = () => {
+function dataValidation(){
     const isFormValid = validateForm();
     const cartRows = cartTable.getElementsByTagName('tr');
     const isCartEmpty = cartRows.length === 0;
@@ -124,9 +92,46 @@ submitButton.onclick = () => {
         alert('Careful! Your cart is empty');
         return;
     }
+}
 
-    // Validation passed
-    resetPage();
-    storeFormData();
-    purchaseDetails();
+//Function to show Purchase details
+function purchaseDetails() {
+    const formDataJSON = localStorage.getItem('formData');
+
+    if (formDataJSON) {
+        const formData = JSON.parse(formDataJSON);
+        const purchaseDetails = document.querySelector('.purchase-details');
+
+        //Submit message
+        purchaseDetails.innerHTML =
+            `
+            <p>${formData.name}, your order has been placed!<br>
+            Sit tight until we send over your pins to your home address:<br>
+            ${formData.address}<br>
+            Stay tuned for further details!</p>
+            `;
+        setTimeout(() => {
+            purchaseDetails.innerHTML = ''; // Clear the content after 15 seconds
+        }, 10000);
+    };
+}
+
+//Function to reset Purchase Info
+function resetPage(){
+        cartTable.innerHTML = '';
+        itemCount.textContent = '0 ITEMS';
+        subtotal = 0;
+        form.reset();
+}
+
+
+//Checkout when button click
+const submitButton = document.querySelector('.submit button[type="button"]');
+
+submitButton.onclick = () => {
+
+    dataValidation() //validate data
+    resetPage(); //reset info
+    storeFormData(); //store forms data
+    purchaseDetails(); //successful purchase msg
 }
