@@ -1,73 +1,73 @@
 {
     "products": [
         {
-            "name": "Mario Pin",
+            "name": "MARIO PIN",
             "id": 1,
-            "img": "https://th.bing.com/th/id/OIP.q1dN_NSbMlTiHSbyJ325zQHaJS?pid=ImgDet&rs=1",
+            "img": "https://i.etsystatic.com/16956617/r/il/a5bef4/1830872451/il_fullxfull.1830872451_sepj.jpg",
             "price": 10
         },
         {
-            "name": "Pac-Man Pin",
+            "name": "LOONEY TUNES PIN",
             "id": 2,
-            "img": "https://i.pinimg.com/originals/c6/13/dc/c613dc8ec634daa327e7c621e9f02fd6.png",
+            "img": "https://i.pinimg.com/736x/7a/83/bb/7a83bbcbd6ee559aadf54340bb733e56.jpg",
             "price": 8
         },
         {
-            "name": "Tetrix Pin",
+            "name": "TETRIX PIN",
             "id": 3,
             "img": "https://th.bing.com/th/id/OIP.2nfGtU1byBzmueycW3xhPAHaHa?pid=ImgDet&rs=1",
             "price": 6
         },
         {
-            "name": "Scooby-Doo Pin",
+            "name": "SCOOBY-DOO PIN",
             "id": 4,
-            "img": "https://th.bing.com/th/id/OIP.vaa75hh-RKHPoH1KfTFfTQHaNQ?pid=ImgDet&rs=1",
+            "img": "https://i.ebayimg.com/images/g/PpkAAOSwm39fUU6j/s-l400.jpg",
             "price": 12
         },
         {
-            "name": "Betty Boop Pin",
+            "name": "BETTY BOOP PIN",
             "id": 5,
             "img": "https://th.bing.com/th/id/R.ade38842e1c713550de103e04b3db3dc?rik=PXRu%2bcDYj7NZYg&pid=ImgRaw&r=0",
             "price": 5
         },
         {
-            "name": "Mickey Mouse Pin",
+            "name": "MICKEY MOUSE PIN",
             "id": 6,
             "img": "https://th.bing.com/th/id/OIP.LnGUA3d3nyGVhjvmzMD94QHaH8?pid=ImgDet&rs=1",
             "price": 10
         },
         {
-            "name": "Bugs Bunny Pin",
+            "name": "BUGS BUNNY PIN",
             "id": 7,
             "img": "https://i.etsystatic.com/23059475/r/il/d52ea3/2355414993/il_1588xN.2355414993_fzhm.jpg",
             "price": 7
         },
         {
-            "name": "Popeye Pin",
+            "name": "POPEYE PIN",
             "id": 8,
-            "img": "https://th.bing.com/th/id/OIP.x95Hz9B4j7oHcKUpreouAgHaIe?pid=ImgDet&rs=1",
+            "img": "https://th.bing.com/th/id/R.22acf3dc5fcdf2943ce435aa5a140ca9?rik=JNC9qKV7%2fNIUOA&pid=ImgRaw&r=0",
             "price": 15
         },
         {
-            "name": "Tom Pin",
+            "name": "TOM PIN",
             "id": 9,
             "img": "https://i.etsystatic.com/6493091/r/il/6453a3/3160117299/il_1140xN.3160117299_c44w.jpg",
             "price": 9
         },
         {
-            "name": "Road Runner Pin",
+            "name": "ROAD RUNNER PIN",
             "id": 10,
             "img": "https://th.bing.com/th/id/OIP._El5Szp8n2c7lr1JoqE1GQHaGg?pid=ImgDet&rs=1",
             "price": 4
         },
         {
-            "name": "Felix the Cat Pin",
+            "name": "FELIX THE CAT PIN",
             "id": 11,
             "img": "https://th.bing.com/th/id/OIP.g2Ar4GQmiTRcnd2-LBAm5wHaHa?pid=ImgDet&rs=1",
             "price": 11
         },
         {
-            "name": "Donald Duck Pin",
+            "name": "DONALD DUCK PIN",
             "id": 12,
             "img": "https://th.bing.com/th/id/R.2e10580524e0b21b72cff461cb6dad07?rik=KBvBCgo3qYSM8A&pid=ImgRaw&r=0",
             "price": 3

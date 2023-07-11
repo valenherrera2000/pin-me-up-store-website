@@ -32,13 +32,18 @@ function addProducts() {
         .then(data => {
             const productData = data.products;
 
+            let countAll = 0;
+            let countSale = 0;
+
             for (let i = 0; i < productData.length; i++) {
                 const product = productData[i];
 
-                if (i < 4) {
+                if (countAll < 4) {
                     new ProductToHTML(product, allCollection);
-                } else if (i < 8) {
+                    countAll++;
+                } else if (product.price < 7 && countSale < 4) {
                     new ProductToHTML(product, saleCollection);
+                    countSale++;
                 } else {
                     new ProductToHTML(product, newCollection);
                 }

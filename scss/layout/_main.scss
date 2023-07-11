@@ -129,6 +129,10 @@ main {
         div{
             @include flex (flex, column, center, center);
 
+            img{
+                width: 35rem;
+                height: 35rem;
+            }
             button {
                 @include button (0.4rem, 2.5rem, solid, $font-color);
                 @include font($button-font, normal, 700, 3rem, $font-color);
@@ -238,6 +242,15 @@ main {
                     background-color: $secondary-background;
                 }
             }
+        }
+    }
+    .purchase-details{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        h3{
+            @include flex (flex, column, center, center);
+            @include font($bold-font, none, 700, 18rem, $font-color);
         }
     }
 }

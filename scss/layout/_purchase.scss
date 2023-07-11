@@ -1,6 +1,10 @@
 body {
     background-color: $main-background;
-
+.toast{
+    width: 29.5rem;
+    height: 7.5rem;
+    @include font($heading-2-font, none, 400, 3rem, $font-color);
+}
     section {
         @include flex (flex, column, center, center);
         gap: 3rem;

@@ -16,6 +16,32 @@ fetch('/products.json')
     })
     .catch(error => console.error('Error fetching products:', error));
 
+    
+//Set button event listeners
+function buttonEvent() {
+    //Add to cart when clicking 'buy' button
+    for (const button of buttons) {
+        button.addEventListener('click', () => {
+            const getProducts = pinProducts.find((product) => product.id == button.id);
+
+            //Call addToCart function
+            addToCart(getProducts); 
+        });
+    }
+
+    // Delete items when clicking on 'trash' icon
+    const cartTable = document.querySelector('.cart-table');
+    cartTable.addEventListener('click', (event) => {
+        if (event.target.classList.contains('trash-bin')) { 
+            const row = event.target.parentElement.parentElement;
+            const productId = row.querySelector('td:first-child').textContent;
+
+            //Call removeFromCart function
+            removeFromCart(productId, row);
+        }
+    });
+}
+
 
 //Add products to Cart function
 function addToCart(product) {
@@ -28,6 +54,18 @@ function addToCart(product) {
             <td><img class="trash-bin" src="/assets/img/icon-trash.png" alt="trash icon"></td>
         </tr>
     `;
+
+    Toastify({
+        text:'ADDED TO CART! :)',
+        className: "toast",
+        duration: 2000,
+        gravity:'bottom',
+        position:'left',
+        style: {
+            background: "linear-gradient(to right, #6E0000, #F14D19)",
+          }
+    }).showToast();
+
 
     // Update item count
     const itemCount = document.getElementById('itemCount');
@@ -92,30 +130,6 @@ function calculateTotal() {
 }
 
 
-//Set button event listeners
-function buttonEvent() {
-    //Add to cart when clicking 'buy' button
-    for (const button of buttons) {
-        button.addEventListener('click', () => {
-            const getProducts = pinProducts.find((product) => product.id == button.id);
-
-            //Call addToCart function
-            addToCart(getProducts); 
-        });
-    }
-
-    // Delete items when clicking on 'trash' icon
-    const cartTable = document.querySelector('.cart-table');
-    cartTable.addEventListener('click', (event) => {
-        if (event.target.classList.contains('trash-bin')) { 
-            const row = event.target.parentElement.parentElement;
-            const productId = row.querySelector('td:first-child').textContent;
-
-            //Call removeFromCart function
-            removeFromCart(productId, row);
-        }
-    });
-}
 
 
 

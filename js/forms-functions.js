@@ -68,11 +68,12 @@ function storeFormData() {
 }
 
 
-//Function for data validation before checkout
+//Checkout when button click
+const submitButton = document.querySelector('.submit button[type="button"]');
 
-function dataValidation(){
+submitButton.onclick = () => {
     const isFormValid = validateForm();
-    const cartRows = cartTable.getElementsByTagName('tr');
+    const cartRows = cartTable.getElementsByTagName('td');
     const isCartEmpty = cartRows.length === 0;
 
     if (!isFormValid && isCartEmpty) {
@@ -92,9 +93,34 @@ function dataValidation(){
         alert('Careful! Your cart is empty');
         return;
     }
+
+    // Validation passed
+    storeFormData();
+    resetPage();
+    purchaseDetails();
 }
 
-//Function to show Purchase details
+// Reset Purchase Info
+function resetPage() {
+    const rows = cartTable.querySelectorAll('tr');
+
+    for (let i = 1; i < rows.length; i++) {
+        rows[i].remove(); // Remove the cart rows
+    }
+    
+    const itemCount = document.getElementById('itemCount');
+    itemCount.textContent = '0 ITEMS'; // Reset item count
+    
+    const subtotalElement = document.querySelector('.subtotal');
+    const totalElement = document.querySelector('.total');
+    subtotalElement.textContent = 'SUBTOTAL:'; // Clear subtotal
+    totalElement.textContent = 'TOTAL AMOUNT:'; // Clear total
+    
+    form.reset(); // Reset forms
+}
+
+
+//Show Purchase details
 function purchaseDetails() {
     const formDataJSON = localStorage.getItem('formData');
 
@@ -105,6 +131,7 @@ function purchaseDetails() {
         //Submit message
         purchaseDetails.innerHTML =
             `
+            <h3>SUCCESS!</h3>
             <p>${formData.name}, your order has been placed!<br>
             Sit tight until we send over your pins to your home address:<br>
             ${formData.address}<br>
@@ -116,22 +143,3 @@ function purchaseDetails() {
     };
 }
 
-//Function to reset Purchase Info
-function resetPage(){
-        cartTable.innerHTML = '';
-        itemCount.textContent = '0 ITEMS';
-        subtotal = 0;
-        form.reset();
-}
-
-
-//Checkout when button click
-const submitButton = document.querySelector('.submit button[type="button"]');
-
-submitButton.onclick = () => {
-
-    dataValidation() //validate data
-    resetPage(); //reset info
-    storeFormData(); //store forms data
-    purchaseDetails(); //successful purchase msg
-}
