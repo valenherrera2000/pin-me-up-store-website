@@ -17,7 +17,11 @@
     <link
         href="https://fonts.googleapis.com/css2?family=DotGothic16&family=Gaegu:wght@700&family=Lekton:wght@700&family=Piedra&family=Poppins:wght@200;600;700&display=swap"
         rel="stylesheet">
-        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <!-- Toastify CSS-->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <!-- Sweet Alert CSS -->
+    <link rel="stylesheet" href="@sweetalert2/theme-bootstrap-4/bootstrap-4.css">
+
 </head>
 
 <body>
@@ -29,7 +33,9 @@
             </div>
             <div class="items-banner">
                 <div>
-                    <a href="#cart"><p id="itemCount">0 ITEMS</p></a>
+                    <a href="#cart">
+                        <p id="itemCount">0 ITEMS</p>
+                    </a>
                 </div>
                 <div>
                     <a href="#cart"><img src="/assets/img/shopping-cart.png" alt="cart image"></a>
@@ -196,7 +202,11 @@
             </div>
         </footer>
     </div>
+    <!-- Toastify -->
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <!-- Sweet Alert  -->
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+    <!-- My JS -->
     <script src="./js/products.js"></script>
     <script src="./js/cart-functions.js"></script>
     <script src="./js/forms-functions.js"></script>

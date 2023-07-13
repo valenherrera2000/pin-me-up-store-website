@@ -1,14 +1,20 @@
 body {
     background-color: $main-background;
-.toast{
-    width: 29.5rem;
-    height: 7.5rem;
-    @include font($heading-2-font, none, 400, 3rem, $font-color);
-}
+
+    .toast {
+        width: 29.5rem;
+        height: 7.5rem;
+        @include font($heading-2-font, none, 400, 3rem, $font-color);
+    }
+
+    .swal2-popup {
+        @include font($heading-2-font, none, 400, 4rem, $font-color);
+    }
+
     section {
         @include flex (flex, column, center, center);
         gap: 3rem;
-        
+
 
         .purchase-icon {
             img {
@@ -17,7 +23,7 @@ body {
         }
 
         .purchase-details {
-            p{
+            p {
                 @include font($heading-2-font, normal, 700, 4.5rem, $font-color);
                 text-align: center;
             }

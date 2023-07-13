@@ -459,6 +459,13 @@ body .toast {
   font-size: 3rem;
   color: #FFFFFF;
 }
+body .swal2-popup {
+  font-family: "Lekton", sans-serif;
+  font-style: none;
+  font-weight: 400;
+  font-size: 4rem;
+  color: #FFFFFF;
+}
 body section {
   display: flex;
   flex-direction: column;

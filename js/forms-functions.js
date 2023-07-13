@@ -78,19 +78,31 @@ submitButton.onclick = () => {
 
     if (!isFormValid && isCartEmpty) {
         // Both form fields & cart not valid
-        alert('You have invalid information. Please, review and submit again!');
+        Swal.fire({
+            title: 'Oops...😲',
+            text: 'You have invalid information! Please, review and submit again',
+            width: '70rem'
+          });
         return;
     }
 
     if (!isFormValid) {
         // Form fields not valid
-        alert('Form fields are not valid');
+        Swal.fire({
+            title: 'Oops...😲',
+            text: 'Your form fields are not valid! Please, review and submit again.',
+            width: '70rem'
+          });
         return;
     }
 
     if (isCartEmpty) {
         // Cart is empty
-        alert('Careful! Your cart is empty');
+        Swal.fire({
+            title: 'Oops...😲',
+            text: 'Your cart is empty! Please, review and submit again.',
+            width: '70rem'
+          });
         return;
     }
 
@@ -102,6 +114,8 @@ submitButton.onclick = () => {
 
 // Reset Purchase Info
 function resetPage() {
+    cartArray = [];
+
     const rows = cartTable.querySelectorAll('tr');
 
     for (let i = 1; i < rows.length; i++) {
