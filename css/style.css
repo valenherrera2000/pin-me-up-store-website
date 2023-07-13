@@ -329,7 +329,11 @@ main .check-out-form form div div input {
   border-radius: 0.1rem;
   border-style: solid;
   border-color: #6BB0F3;
+  font-family: "Lekton", sans-serif;
+  font-style: normal;
+  font-weight: 700;
   font-size: 2.5rem;
+  color: #000000;
 }
 main .check-out-form form div div textarea {
   width: 70rem;
@@ -338,7 +342,11 @@ main .check-out-form form div div textarea {
   border-radius: 0.1rem;
   border-style: solid;
   border-color: #6BB0F3;
+  font-family: "Lekton", sans-serif;
+  font-style: normal;
+  font-weight: 700;
   font-size: 2.5rem;
+  color: #000000;
 }
 main .check-out-form form .submit {
   display: flex;
